@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/reset.css">
-  <script src="./js/main.js"></script>
+  <script defer src="./js/main.js"></script>
   <style>
     div {
       text-decoration: underline;
@@ -18,9 +18,42 @@
 </head>
 <body>
   <div>Hello world!</div>
-  <img src="" alt="">
-  <a href="https://naver.com">NAVER</a>
+  <img src="" alt="" />
+  <h1>오늘의 날씨</h1>
+  <h2>오늘의 날씨</h2>
+  <h3>오늘의 날씨</h3>
+  <ul>
+    <li>사과</li>
+    <li>딸기</li>
+    <li>수박</li>
+  </ul>
+  <!-- 애국가 -->
+  <p>우리나라 동해 물과 <br />백 두산이 마르고 닳다로고 <span>오오옥</span></p>
+  <a href="https://naver.com" target="_blank">NAVER</a>
   <a href="/campus_html/about">About</a>
   <a href="/campus_html/login">Login</a>
+  <input type="text" value="cm" placeholder="이름을 입력하세요" />
+  <label>
+    <input type="checkbox" checked /> Apple
+  </label>
+  <label>
+    <input type="radio" name="fruits"/> Apple
+  </label>
+  <label>
+    <input type="radio" name="fruits"/> Banana
+  </label>
+  <table>
+    <tr>
+      <td>A</td>
+      <td>B</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td colspan="2">D</td>
+    </tr>
+  </table>
+  <div class="fruitList" data-fruit-name="apple">사과</div>
+  <div class="fruitList" data-fruit-name="banana">바나나</div>
 </body>
 </html>
