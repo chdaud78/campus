@@ -8,5 +8,28 @@ div {
 table td {
     border: 1px solid red;
     padding: 10px;
-  }
+}
+
+[type="password"] {
+  background-color: skyblue;
+}
+
+[data-fruit-name="water"] {
+  background-color: royalblue;
+}
+
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: blueviolet;
+}
+
+.child {
+  width: 100px;
+  height: inherit;
+  background-color: inherit;
+  position: fixed;
+  top: 100px;
+  right: 10px;
+}
 

@@ -1,0 +1,27 @@
+div {
+  font-size: 70px;
+}
+/* 10점 */
+.hello {
+  color: red;
+}
+
+/* 10점 */
+.hello {
+  color: green;
+}
+
+/* 11점 */
+div.hello {
+  color: mediumaquamarine;
+}
+
+/* 100점 */
+#hello {
+  color: blue;
+}
+
+/* 무한대 */
+.hello {
+  color: blueviolet !important;
+}

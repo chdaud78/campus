@@ -62,4 +62,42 @@ css 선언 방식
   </div>
 
  4. 가상 요소
+  ㄴ ::before : 선택자 요소의 내부 앞에 내용을 삽입(인라인 요소 / 내용을 삽입 하여야 하므로 content 속성을 꼭 사용해야함)
+  ㄴ ::after : 선택자 요소의 내부 뒤에 내요을 삽입(인라인 요소 / 내용을 삽입 하여야 하므로 content 속성을 꼭 사용해야함)
+
  5. 속성
+  ㄴ [ABC] : 속성 ABC를 포함한 요소 선택 (ex) [disabled] - disabled라는 속성을 포함한 요소 선택)
+  ㄴ [ABC="XYZ"] 속성 ABC를 포함하고 값이 XYZ인 요소 선택 (ex) [type="password"] type속성이고 값이 password인 요소 선택)
+
+--------------------------------------------------
+
+css 스타일 상속 : 하위 요소에 css 영향을 끼치는 것.
+
+상속 되는 css 속성들
+ ㄴ 모두 글자/문자 관련 속성들
+ ㄴ font-style
+ ㄴ font-weight
+ ㄴ font-size
+ ㄴ line-height
+ ㄴ font-family
+ ㄴ color
+ ㄴ text-align 등
+
+강제 상속 : 상속 되지 않는 css 요소도 상속이 되게 만듦(inherit 값 사용)
+
+----------------------------------------------------
+
+css 선택자 우선순위
+ ㄴ 같은 요소가 여러 선언의 대상이 된 경우, 어떤 선언의 css 속성을 우선 적용할지 결정하는 방법
+ ㄴ 점수가 높은 선언이 우선
+ ㄴ 점수가 같으면, 가장 마지막에 해석된 선언이 우선
+ ㄴ !important(무한대) > inline style(1000점) > id(100점) > class(10점/ 가상클래스도 포함) > tag(1점 / 가상요소도 포함) > *(0점) > 상속(점수 계산 x)
+
+ cf)
+ .list li.item 21점
+ .list li:hover 21점
+ .box::before 11점
+ #submit span 101점
+ header .menu li:nth-child(2) 22점
+ h1 1점
+ :not(.box) 10점

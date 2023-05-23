@@ -27,10 +27,27 @@ p {
   background-color: red;
 }
 
-.textBox {
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
 
+.box2::before {
+  content: "Before";
+}
+.box2::after {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: royalblue;
+  content: "";
+}
+
+.textBox {
+  background-color: blue;
 }
 
 .textBox:focus {
-  background-color: orange;
+  background-color: red;
 }
