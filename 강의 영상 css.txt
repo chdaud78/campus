@@ -143,7 +143,29 @@ css 선택자 우선순위
   ㄴ opacity : 요소의 투명도 (기본값 : 1 / 0~1 사이의 소수점으로 표현 / 0이면 안보임)
 
  글꼴, 문자
+  ㄴ font-style : 글자의 기울기(기본값: normal / italic : 이텔릭체 / oblique : 기울어진 글자)
+  ㄴ font-weight : 글자의 두께 (기본값: 400,normal / bold: 700 / 1000~900 / border : 상위보다 두껍게 / lighter : 상위보다 얇게)
+  ㄴ font-size : 글자의 크기 (기본값: 16px / px)
+  ㄴ line-height: 한줄의 높이, 행간과 유사 (기본값: normal,1 / 숫자 : 요소의 글꼴 크기의 배수 / 단위)
+  ㄴ font-famil : 글꼴 지정 (ex) font-family: 글꼴1, 글꼴2, ...글꼴계열(필수) / 후보들을 지정 -> 글꼴을 사용할수 없는 환경인 경우 다음 후보 이용 / 띄어쓰기 있는 경우 따옴표 이용)
+  cf) 바탕체 : serif
+      고딕체 : sans-serif
+      고정너비 글꼴 계열 : monospace
+      필기체 : cursive
+      장식 : fantasy
+  ㄴ color : 글자의 색상(기본값: rgb(0,0,0), 검정)
+  ㄴ text-align : 문자의 정렬방식(기본값 : left / right: 오른쪽 / center: 가운데 / justify: 양쪽 정렬)
+  ㄴ text-decoration : 문자의 장식(기본값: none / underline: 밑줄 / overline: 윗줄 / line-through: 중앙 선)
+  ㄴ text-indent : 문자 첫 줄의 들여쓰기(기본값: 0 / 단위 / 음수가능)
+
  배경
+  ㄴ background-color : 요소의 배경 색상(기본값: transparent / 색)
+  ㄴ background-image : 요소 배경 이미지 삽입(기본값: none / url("경로"))
+  ㄴ backgorund-repeat : 요소 배경 이미지 반복(기본값: repeat / repeat-x: 이미지를 수평 반복 / repeat-y: 이미지를 수직 반복 / no-repeat: 반복 없음)
+  ㄴ background-position : 요소 배경 이미지 위치(기본값: 0% 0%/ 0 ~ 100% 값 / 방향: top, bottom, left, right, center / 단위: x y)
+  ㄴ background-size : 요소 배경 이미지 크기(기본값: auto,실제크기 / 단위 / cover: 비율을 유지, 요소의 더 넓은 너비에 맞춤 / contain: 비율을 유지, 요소의 더 짧은 너비에 맞춤)
+  ㄴ background-attachment : 요소 배경 이미지 스크롤 특성(기본값: scroll, 이미지가 요소를 따라서 같이 스크롤 / fixed: 이미지가 뷰포트에 고정, 스크롤x / local: 요소 내 스크롤 시 이미지가 같이 스크롤)
+
  배치
  플렉스(정렬)
  전환
