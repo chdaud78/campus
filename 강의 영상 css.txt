@@ -167,7 +167,19 @@ css 선택자 우선순위
   ㄴ background-attachment : 요소 배경 이미지 스크롤 특성(기본값: scroll, 이미지가 요소를 따라서 같이 스크롤 / fixed: 이미지가 뷰포트에 고정, 스크롤x / local: 요소 내 스크롤 시 이미지가 같이 스크롤)
 
  배치
+  ㄴ position : 요소의 위치 지정 기준(기본값: static / relative: 요소 자신을 기준(실제로 보이는 것은 허상, 실제론 그냥 있음) / absolute : 위치 상 부모 요소를 기준(position: relative를 가진 부모, 없으면 viewport 기준) / fixed : 뷰포트를 기준 / sticky : 스크롤 영역 기준)
+  ㄴ top, left, bottom, right : 요소의 각 방향벌 거리 지정 (기본값 : auto, 브라우저가 계산 / 단위)
+  ㄴ 요소 쌓임 순서 : 1. 요소에 position 속성의 값이 있는 경우 위에 쌓임.(기본값 static 제외)
+                   2. 1번 조건이 같은 경우, z-index 속성의 숫자 값이 높을 수록 위에 쌓임.
+                   3. 1번, 2번 같은 경우, html의 다음 구조일 수록 위에 쌓임.
+  ㄴ z-index : 요소의 쌓임 정도를 지정 (기본값: auto, 부모 요소와 동일한 쌓임 정도(0), 숫자: 높을 수록 위에 쌓임)
+  ㄴ 요소의 display가 변경됨 : position 속성의 값으로 absolute, fixed가 지정된 요소는, display 속성이 block으로 변경됨.
+
  플렉스(정렬)
+ :플렉스 container
+  ㄴ display : Flex Container의 화면 출력 특성 (flex: 블록 요소와 같이 Flex Container 정의 / inline-flex: 인라인 요소와 같이 Flex Container 정의)
+  ㄴ flex-direction : 주 축을 설정 (기본값: row, 행 축(좌 => 우) / row-reverser: 행 축(우 => 좌) / column: 열 축 (위 => 아래) / column-revese: 열 축(아래 => 위))
+  ㄴ
  전환
  변환
  띄움

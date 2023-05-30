@@ -92,3 +92,55 @@ h1 {
   text-align: center;
   line-height: 100px;
 }
+
+.box-wrap {
+  width: 400px;
+  height: 300px;
+  background-color: tomato;
+  position: relative;
+}
+
+.box-container {
+  width: 300px;
+  background-color: royalblue;
+  /*position: relative;*/
+}
+
+.box-container .item {
+  border: 4px dashed red;
+  background-color: orange;
+}
+
+.box-container .item:nth-child(1) {
+  width: 100px;
+  height: 100px;
+}
+.box-container .item:nth-child(2) {
+  width: 140px;
+  height: 70px;
+  /*position: relative;*/
+  /*top: 30px;*/
+  /*left: 60px;*/
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
+}
+.box-container .item:nth-child(3) {
+  width: 70px;
+  height: 120px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.flex-container {
+  background-color: royalblue;
+  display: flex;
+}
+
+.flex-container .item {
+  width: 100px;
+  height: 100px;
+  border: 3px dashed red;
+  background-color: orange;
+}
