@@ -179,9 +179,64 @@ css 선택자 우선순위
  :플렉스 container
   ㄴ display : Flex Container의 화면 출력 특성 (flex: 블록 요소와 같이 Flex Container 정의 / inline-flex: 인라인 요소와 같이 Flex Container 정의)
   ㄴ flex-direction : 주 축을 설정 (기본값: row, 행 축(좌 => 우) / row-reverser: 행 축(우 => 좌) / column: 열 축 (위 => 아래) / column-revese: 열 축(아래 => 위))
-  ㄴ
+  ㄴ flex-wrap : flex items 묶음(줄 바꿈) 여부 (기본값: no-wrap, 묶음 없음 / wrap: 여러 줄로 묶음 / wrap-reverse: wrap의 반대 방향으로 묶음)
+  ㄴ justify-content : 주 축의 정렬 방법 (기본값: flex-start, flex items를 시작점으로 정렬 / flex-end: 끝 점으로 정렬 / center: 가운데 정렬 / space-between: 각 flex item 사이를 균등하게 정렬 / space-around : 각 flex item의 외부 여백을 균등하게 정렬)
+  ㄴ align-content : 교차 축의 여러 줄 정렬 방법 (기본값: stretch, flex items를 시작점으로 정렬 / flex-start: flex items를 시작점으로 정렬 / flex-end 끝 점으로 정렬 / center: 가운데 정렬 / space-between : 각 flex-item 사이를 균등하게 정렬 / space-around: 각 flex item의 외부 여백을 균등하게 정렬)
+  ㄴ align-items : 굧 축의 한줄 정렬 방법 (기본값: stretch, flex items를 교차 축으로 늘림 / flex-start: 각 줄의 시작점으로 정렬 / flex-end: 각 줄의 끝점으로 정렬 / center: 각 줄의 가운데 정렬 / baseline: 각 줄의 문자 기준선에 정렬)
+  ㄴ order : flex-item의 순서 (기본값: 0, 숫자: 작을수로 먼저)
+  ㄴ flex-grow : flex item의 증가 너비 비율(기본값: 0, 증가 비율 없음/ 숫자: 증가 비율)
+  ㄴ flex-shrink : flex item의 감소 너비 비율(기본값: 1, flex container 너비에 따라 감소비율 적용 / 숫자: 감소비율)
+  ㄴ flex-basis : flex item의 공간 배분 전 기본 너비(기본값: auto, 요소의 content 너비 / 단위: px, em, rem등) (강의 참고)
+
  전환
+  ㄴ transition : 요소의 전환(시작과 끝) 효과를 지정하는 단축 속성 (transition: 속성명 지속시간(필수) 타이밍함수 대기시간; 콤마를 사용하여 여러개 가능)
+  ㄴ transition-propterty : 전환 효과를 사용할 속성 이름을 지정(기본값: all, 모든 속성에 적용 / 속성이름: 전화 효과를 사용할 속성 이름 명시)
+  ㄴ transition-duration : 전환 효과의 지속 시간을 지정(기본값: 0, 전환 효과 없음 / 시간: 지속 시간(s)을 지정)
+  ㄴ transition-timing-function : 전환 효과의 타이밍(easing) 함수를 지정 / 그래프 참고
+    기본값: ease, 느리게 - 빠르게 - 느리게(cubic-bezier(0.25, 0.1, 0.25, 1))
+    linear : 일정하게 (cubic-bezier(0, 0, 1, 1))
+    ease-in : 느리게 - 빠르게 (cubic-bezier(0.42, 0, 1, 1))
+    ease-out : 빠르게 - 느리게 (cubic-bezier(0, 0, 0.58, 1))
+    ease-in-out : 느리게 - 빠르게 - 느리게 (cubic-bezier(0.42, 0, 0.58, 1))
+    cubic-bezier(n,n,n,n) : 자신만의 값을 정의(0~1)
+    steps(n) : n번 분할된 애니메이션
+    cf) https://easings.net/ko, https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function, https://greensock.com/docs/Easing
+  ㄴ transition-delay : 전환 효과가 몇 초 뒤에 시작할지 대기시간을 지정(기본값: 0s, 대기시간 없음 / 시간: 대기시간(s)을 지정)
+
  변환
+  ㄴ transform : 요소의 변환 효과 (transform: 변환함수1 변환함수2 변환함수3 ... ; / transform: 원근법 이동 크기 회전 기울임;)
+  cf) 2d 변환 함수
+       ㄴ translate(x,y) : 이동(x축, y축)
+       ㄴ translateX(x) : 이동(x축)
+       ㄴ translateY(y) : 이동(y축)
+       ㄴ scale(x,y) : 크기(x축, y축) 배수
+       ㄴ scaleX(x) : 크기(x축) 배수
+       ㄴ scaleY(y) : 크기(y축) 배수
+       ㄴ rotate(degree) : 회전(각도)
+       ㄴ rotateX(degree) : x축 기준 회전, 원근법(perspective)이 적용되야 눈에 보임
+       ㄴ rotateY(degree) : y축 기준 회전, 원근법(perspective)이 적용되야 눈에 보임
+       ㄴ skew(x,y) : 기울임(x축, y축)
+       ㄴ skewX(x) : 기울임(x축)
+       ㄴ skewY(y) : 기울임(y축)
+       ㄴ matrix(n,n,n,n,n,n) : 2차원 변환 효과
+      3d 변환 함수
+       ㄴ translateZ(z) : 이동(z축)
+       ㄴ translate3d(x,y,z) : 이동(x축, y축, z축)
+       ㄴ scaleZ(z) : 크기(z축)
+       ㄴ scale3d(x,y,z) : 크기(x축, y축, z축)
+       ㄴ perspective(n) : 원근법(거리)
+       ㄴ rotateX(x) : 회전(x축)
+       ㄴ rotateY(y) : 회전(y축)
+       ㄴ rotateZ(z) : 회전(z축)
+       ㄴ rotate3d(x,y,z,a) : 회전(x축, y축, z축, 각도)
+       ㄴ matrix3d(n,n * 8 = n 16개) : 3차원 변환 효과
+  ㄴ perspective : 하위 요소를 관찰하는 원근 거리르 지정(단위: px등 단위로 지정)
+  cf) perspective 속성과 함수 차이점 (강의 참고)
+            속성/ 함수         적용 대상        기준점 설정
+      perspective: 600px; 관찰 대상의 부모 perspective-origin
+      transform: perspective(600px); 관찰 대상 transform-origin
+  ㄴ backface-visibility : 3d 변환으로 회전된 요소의 뒷면 숨김 여부(기본값: visible, 뒷면 보임 / hidden: 뒷면 숨김)
+
  띄움
  애니메이션
  그리드
