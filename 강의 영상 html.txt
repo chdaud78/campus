@@ -228,3 +228,23 @@ class - 요소를 지칭하는 중복 가능한 이름 (선택자, css/js로 제
 id - 요소를 지칭하는 고유한 이름
 data - 요소에 데이터를 지정
  ㄴ ex) data-이름="데이터"
+
+----------------------------
+
+BEM(Block Element Modifier) : HTML 클래스 속성의 작명법
+ ㄴ 요소__일부분 : Underscore 기호로 요소의 일부분을 표시
+ ㄴ 요소--상태 : hyphen 기호로 요소의 상태를 표시
+ ex)
+  <div class="container">                          <div class="container">
+    <div class="name"></div>                         <div class="container__name"></div>
+    <div class="item">                    ->         <div class="item">
+      <div class="name"></div>                         <div class="item__name"></div
+    </div>                                           </div>
+  </div>                                           </div>
+
+  <div class="btn primary"></div>         ->       <div class="btn btn--primary"></div>
+  <div class="btn success"></div>         ->       <div class="btn btn--success"></div>
+  <div class="btn error"></div>           ->       <div class="btn btn--error"></div>
+
+----------------------------
+
