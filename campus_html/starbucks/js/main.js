@@ -33,4 +33,50 @@ window.addEventListener('scroll', _.throttle(function() {
     })
   }
 }, 300));
-// _.throttle(함수, 시간); -> 시간마다 함수 실행 제한
+// _.throttle(함수, 시간); -> 시간마다 함수 실행
+
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+
+fadeEls.forEach(function(fadeEls, index) {
+  gsap.to(fadeEls, 1, {
+    delay: (index + 1) * .7, // .7s, 1.4s, 2.1s, 2.7s
+    opacity: 1
+  })
+});
+
+new Swiper('.notice-line .swiper-container', {
+  direction: 'vertical',
+  autoplay: true,
+  loop: true,
+});
+
+new Swiper('.promotion .swiper-container', {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: '.promotion .swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    prevEl: '.promotion .swiper-prev',
+    nextEl: '.promotion .swiper-next',
+  }
+});
+
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+
+promotionToggleBtn.addEventListener('click', function() {
+  isHidePromotion = !isHidePromotion;
+  if (isHidePromotion) {
+    promotionEl.classList.add('hide');
+  } else {
+    promotionEl.classList.remove('hide');
+  }
+});
