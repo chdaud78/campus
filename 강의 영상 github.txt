@@ -24,6 +24,7 @@ git init
 
 # 변경사항을 추적할 특정 파일을 지정
 git add 파일이름
+
 # 모든 파일의 변경사항을 추적하도록 지정
 git add .
 
@@ -36,6 +37,23 @@ git remote add origin https://github.com...
 # origin 이란 별칭의 원격 저장소로 버전 내역 전송
 git push origin master
 
+# 버전을 갯수만큼 뒤로 되돌리기
+git reset --hard HEAD~갯수
+
+# 리셋 되돌리기
+git reset --hard ORIG_HEAD
+
+# branch 가져오기
+git checkout -t 브렌치이름
+
+# branch 지우기
+git branch -d 브랜치이름
+
+# branch 생성하면서 checkout
+git branch -b 브랜치이름
+
+# 변경 내용 가져오기
+git pull
 ------------------------------------------------
 
 
