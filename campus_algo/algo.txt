@@ -1,0 +1,39 @@
+# 정수 표현
+ParseInt()
+# 수 표현
+Number()
+# 사칙연산
+a+b , a-b , a*b , a/b , a%b
+# 조건문
+if
+else if
+else
+# 배열 만들기
+map()
+# 논리 연산
+&& 그리고
+|| 또는
+#크기 연산
+> 초과
+>= 이상
+<= 이하
+< 미만
+# 백틱
+`${변수} ${변수*변수}`
+# 반복문
+for(초기 ; 몇번 ; 조건)
+# 배열 reduce
+list.reduce()
+# 함수 최대 최소
+Math.max()
+Math.min
+# 집합
+Set : 중복없이 저장
+# 배열 추가
+push
+# 문자열 각자 읽기
+charAt(index)
+# 문자열 반복추가
+repeat(number)
+# 문자열 양끝 공백제거
+trim()

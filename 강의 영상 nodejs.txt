@@ -1,0 +1,20 @@
+# Node.js란
+Chrome V8 javascript 엔진으로 빌드된 JS 런타임
+
+## 런타임
+프로그래밍 언어가 동작하는 환경
+
+## NVM
+Node Version Manager
+협업 시 노드 버전에 따라 달라질 수 있으므로 버전 매니저 어플 필요
+
+// nvm 설치
+nvm install (버전)
+// 버전 리스트
+nvm ls
+// 특정 버전 사용
+nvm use (버전)
+
+## NPM
+Node Package Manager
+전 세계 개발자들이 만든 다양한 기능(패키지, 모듈)들을 관리
